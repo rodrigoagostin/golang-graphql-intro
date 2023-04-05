@@ -58,10 +58,10 @@ func main() {
 		graphql.ObjectConfig{
 			Name: "Author",
 			Fields: graphql.Fields{
-				"Name": &graphql.Field{
+				"name": &graphql.Field{
 					Type: graphql.String,
 				},
-				"Tutorials": &graphql.Field{
+				"tutorials": &graphql.Field{
 					Type: graphql.NewList(graphql.Int),
 				},
 			},
@@ -130,8 +130,8 @@ func main() {
 			tutorial(id: 1) {
 				title
 				author {
-					Name
-					Tutorials
+					name
+					tutorials
 				}
 			}
 		}
